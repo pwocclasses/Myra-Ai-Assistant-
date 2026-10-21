@@ -44,6 +44,45 @@ export default defineConfig(() => {
               purpose: 'maskable',
             },
           ],
+          screenshots: [
+            {
+              src: '/screenshot-mobile.png',
+              sizes: '512x512',
+              type: 'image/png',
+              form_factor: 'narrow',
+              label: 'MAYRA AI Android Mobile Interface',
+            },
+            {
+              src: '/screenshot-desktop.png',
+              sizes: '512x512',
+              type: 'image/png',
+              form_factor: 'wide',
+              label: 'MAYRA AI Fullscreen Cybernetic Studio',
+            },
+          ],
+          shortcuts: [
+            {
+              name: 'Talk to Mayra',
+              short_name: 'Talk',
+              description: 'Start real-time voice conversation with Mayra',
+              url: '/?view=assistant',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+            },
+            {
+              name: 'Coding Studio',
+              short_name: 'Code',
+              description: 'Open full-stack code generator & HTML sandbox',
+              url: '/?view=coding',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+            },
+            {
+              name: 'YouTube Music',
+              short_name: 'Music',
+              description: 'Discover and play curated songs and beats',
+              url: '/?view=youtube',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+            },
+          ],
         },
         devOptions: {
           enabled: true,
