@@ -14,9 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
-app.use(express.static(path.resolve(__dirname, 'public')));
-
-// Explicit PWA & Android WebAPK routes for PWABuilder & browsers
+// Explicit PWA & Android WebAPK routes for PWABuilder & browsers (must precede generic static)
 app.get('/manifest.json', (req, res) => {
   res.setHeader('Content-Type', 'application/manifest+json');
   res.sendFile(path.resolve(__dirname, 'public', 'manifest.json'));
@@ -32,6 +30,8 @@ app.get('/sw.js', (req, res) => {
   res.setHeader('Service-Worker-Allowed', '/');
   res.sendFile(path.resolve(__dirname, 'public', 'sw.js'));
 });
+
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 // Helper to get Gemini client
 function getGeminiClient() {

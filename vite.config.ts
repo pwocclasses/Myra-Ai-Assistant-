@@ -20,10 +20,16 @@ export default defineConfig(() => {
           theme_color: '#070410',
           background_color: '#070410',
           display: 'standalone',
+          display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
           orientation: 'portrait',
           start_url: '/',
           scope: '/',
           categories: ['productivity', 'utilities', 'entertainment'],
+          prefer_related_applications: false,
+          related_applications: [],
+          launch_handler: {
+            client_mode: 'auto',
+          },
           icons: [
             {
               src: '/pwa-192x192.png',
@@ -47,14 +53,14 @@ export default defineConfig(() => {
           screenshots: [
             {
               src: '/screenshot-mobile.png',
-              sizes: '512x512',
+              sizes: '1080x1920',
               type: 'image/png',
               form_factor: 'narrow',
               label: 'MAYRA AI Android Mobile Interface',
             },
             {
               src: '/screenshot-desktop.png',
-              sizes: '512x512',
+              sizes: '1280x720',
               type: 'image/png',
               form_factor: 'wide',
               label: 'MAYRA AI Fullscreen Cybernetic Studio',
@@ -66,21 +72,21 @@ export default defineConfig(() => {
               short_name: 'Talk',
               description: 'Start real-time voice conversation with Mayra',
               url: '/?view=assistant',
-              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
             },
             {
               name: 'Coding Studio',
               short_name: 'Code',
               description: 'Open full-stack code generator & HTML sandbox',
               url: '/?view=coding',
-              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
             },
             {
               name: 'YouTube Music',
               short_name: 'Music',
               description: 'Discover and play curated songs and beats',
               url: '/?view=youtube',
-              icons: [{ src: '/pwa-192x192.png', sizes: '192x192' }],
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
             },
           ],
         },
