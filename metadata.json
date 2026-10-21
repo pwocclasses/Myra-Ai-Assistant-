@@ -1,0 +1,7 @@
+{
+  "name": "MAYRA AI — Personal AI Companion",
+  "description": "Your World, Your AI, Your Mayra. An intelligent personal AI companion powered by Google Gemini, featuring natural voice conversation in Hindi, Hinglish, and English, Android app controls, Coding Studio, YouTube music, screen assistant, and a futuristic cybernetic interface.",
+  "requestFramePermissions": ["camera", "microphone", "display-capture"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
